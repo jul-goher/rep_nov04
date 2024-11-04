@@ -8,6 +8,8 @@ fasta_seq
 globins <- msa (fasta_seq, method = "Muscle") 
 globins
 
+glob <- msa (fasta_seq, method = "ClustalW")
+glob 
 
 #Matriz de distancias con seqinr
 library (seqinr)
@@ -16,16 +18,25 @@ globins2
 
 dist_m <- dist.alignment (globins2)
 
+glob2 <- msaConvert (glob, type = "seqinr::alignment")
+glob2
+dis2 <- dist.alignment (glob2)
+
 #Árbol filogenético 
 install.packages("ape")
 library (ape)  
 globinstree <- nj (dist_m)
 print (globinstree)
 
+globclus <- nj (dis2)
+globclus
+
 #Mandar a results
 pdf ("results/globinstree.pdf")
 plot (globinstree)
 dev.off ()
 
-
+pdf ("results/glob2tree.pdf")
+plot (globclus)
+dev.off ()
 
