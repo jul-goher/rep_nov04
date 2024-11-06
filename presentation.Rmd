@@ -1,0 +1,67 @@
+---
+title: "presentation"
+author: "Julie"
+date: "2024-11-06"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
+
+## Slide 1
+* pancake 
+* coffee
+* latte 
+
+![Food](https://images.squarespace-cdn.com/content/v1/539cc3c1e4b045b6dc9898db/1517442967957-1UZMPYSU3TLE96A19W27/6853922153_c8e2239d06_b.jpg) {width=10%}
+
+## Slide 2
+*Yellow fungi*
+![Fungi](https://s3.amazonaws.com/eit-planttoolbox-prod/media/images/Leucocoprinus-birnba_eYW0DatStmyM.jpeg){width=20%}
+
+Leucocoprinus birnba
+
+
+## Slide 3
+New slide, with code this time 
+
+*Added a chunk for this*
+
+```{r}
+dna_data <- data.frame(
+  secuencia = c("ATCGATCG", "GCTAGCTA", "TTAAGGCT"),
+  tamaño = c(8, 8, 8),
+  contenido_GC = c(0.5, 0.4, 0.3)
+)
+print (dna_data)
+
+dna_data [2, "secuencia"]
+```
+
+
